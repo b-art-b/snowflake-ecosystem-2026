@@ -12,7 +12,7 @@ relationship-graphs/mobile-360-agents.png
 *.visual-check.*
 
 # Private working files (never published)
-campaign/
+/[c]ampaign/
 plan.md
 post.md
 
