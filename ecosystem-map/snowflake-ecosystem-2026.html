@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="snowflake-source" content="cortex-agent-authored" />
+<title>Snowflake AI Data Cloud - 2026 Overview</title>
+<script type="application/json" id="snowflake-report-metadata">
+{
+  "generated": "2026-11-06",
+  "intent": "One-picture map of the Snowflake AI Data Cloud: 16 groups, 108 platform capabilities and ecosystem entries. Snowflake-specific scope.",
+  "producerNotes": "Expedition 2026 items verified against public Expedition 2026 announcements and docs on 2026-11-06 (press releases, Snowflake blog, docs.snowflake.com, developer guides). Docs and guide links rechecked 2026-11-13 (renamed docs paths updated, App Runtime guide re-pointed, Hybrid Tables engine GA per Snowflake blog 2026-11-10). Where public sources conflict, the most conservative status is used.",
+  "dataSources": [
+    {
+      "type": "docs",
+      "url": "https://docs.snowflake.com/"
+    },
+    {
+      "type": "official-web",
+      "urls": [
+        "https://www.snowflake.com/en/product/features/snowflake-trail/",
+        "https://www.snowflake.com/en/why-snowflake/partners/",
+        "https://www.snowflake.com/en/why-snowflake/partners/all-partners/",
+        "https://www.snowflake.com/en/product/use-cases/ai-powered-bi/",
+        "https://www.snowflake.com/en/why-snowflake/startup-program/startup-accelerator/"
+      ]
+    },
+    {
+      "type": "open-source",
+      "name": "Lucide",
+      "version": "1.72.0",
+      "package": "lucide-static",
+      "url": "https://lucide.dev",
+      "license": "ISC",
+      "notes": "Icon inner elements embedded as inline SVG symbols (viewBox 0 0 24 24, stroke currentColor). License text embedded in an HTML comment above the sprite."
+    }
+  ],
+  "sections": [
+    {
+      "id": "layers",
+      "title": "16 groups",
+      "producerNotes": "Static content. Verified in docs 2026-10-27: Adaptive Compute GA, Snowflake CoWork (formerly Snowflake Intelligence), CoCo / Cortex Code, Snowflake Postgres. Re-check GA status of other tiles before publishing. The original 75 documentation links were HTTP-checked on 2026-10-27. Twelve additional entries use official documentation or Snowflake product/program pages, all HTTP-checked successfully on 2026-10-27, bringing the total to 87 links across 90 tiles. Cortex Sense, Business Ontology and Skills & Plugins remain unlinked; public documentation was not located in the prior check. Observability & Ops is a capability grouping; Partners & Ecosystem includes programs and integrations, not exclusively native products. Partner App Trials uses the current documentation title rather than the former Partner Connect label. Icons are Lucide v1.72.0 (ISC License) stroke icons embedded as currentColor symbols; they are illustrative, not product logos. CoCo surfaces verified 2026-10-28: the Cortex Code (CoCo) tile is an umbrella with three GA surface chips (Snowsight, Desktop, CLI); chips are subentries, not capabilities, so the 15 groups / 90 tiles and the 87 tile-level documentation links are unchanged, with 3 additional surface-chip documentation links counted separately. The main CoCo tile still links to the overview. Agent SDK is Preview and not shown as a surface. CoCo Automations now maps to the cortex-code-automations documentation page; CLI/Snowsight automations run as Snowflake-hosted AGENT TASKs (Open Preview as of 2026-10-28; GA in Snowsight and CLI per Expedition 2026), distinct from local Desktop automations. Migration & Modernization group added 2026-10-28 (16 groups / 95 tiles): SnowConvert AI moved from Ingestion & Connectors (now 5 tiles) and five new tiles added; all five new documentation links HTTP-checked 2026-10-28, bringing tile-level documentation links to 92. AIM stands for AI-driven Modernization and Virtualization. AI-assisted code conversion currently covers SQL Server and Amazon Redshift sources only; ETL to dbt conversion is GA for SSIS and Preview for Informatica; Teradata Virtualization is GA for select customers via a customer-hosted gateway; Spark Migration (spark-migration CoCo skill to Snowpark Connect) validates with a smoke test, not data validation. The third-party SAS migration guide is intentionally not mapped. Expedition 2026 (verified against public announcements and docs on 2026-11-06, 16 groups / 108 tiles): Pipeline Builder, Optima Clustering, Cortex AI Gateway, Cortex Sandboxes, Cortex Training and Open Data Sharing (Apache Polaris), plus seven new tiles: Datastream and Streaming Transformations (Ingestion & Connectors), Cortex Agent SDK and Async Agent API (Agents), Snowflake Dashboards and Analytical Search (AI for Everyone), Agents for Shared Data (Sharing & Collaboration). Ten documentation links added (all HTTP 200 on 2026-11-06), including Business Ontology (Horizon Context page) and Skills & Plugins (sharing page); tile-level documentation links now 102 of 108. Unlinked (no public docs page found): Streaming Transformations, Cortex Sense, Cortex Sandboxes, Async Agent API, Analytical Search, Agents for Shared Data. See the expedition-2026 section."
+    },
+    {
+      "id": "views",
+      "title": "Persona views",
+      "producerNotes": "Tabs and ?view=de|ai|ds render persona flows (Data Engineering: 5 stages / 32 tiles including a Migrate stage added 2026-10-28; AI & Agents: 4 stages / 26 tiles; Data Science & ML: 4 stages / 25 tiles before Expedition 2026; after the 2026-11-06 public verification: Data Engineering 34 tiles, AI & Agents 31, Data Science & ML 26) from the same layers/docs/tileIcons data, so renames and links stay in one place. Tiles keep their home-layer colour; stage headers take the colour of their first tile. Renames box shows only in the full view. PNG exports: snowflake-ecosystem-2026[-de|-ai|-ds].png."
+    },
+    {
+      "id": "link-modes",
+      "title": "Docs and Hands-on",
+      "dataSources": [
+        {
+          "type": "official-web",
+          "url": "https://www.snowflake.com/en/developers/guides/"
+        },
+        {
+          "type": "official-web",
+          "url": "https://www.snowflake.com/content/snowflake-site/global.sitemap.xml"
+        }
+      ],
+      "producerNotes": "Embedded guides map records verified public URLs, guide labels and scope notes. Links and substantive topic fit checked 2026-10-27; code, availability and trial terms not tested. Conceptual-only cost architecture pages and adjacent SDK automation/MFA auditing guides excluded. ?links=guides composes with every persona view. Unmatched tiles remain visible, dashed and non-clickable with No guide mapped; not proof no guide exists. Scoped lab marker and title disclose partial/multi-topic coverage. Six broader matches added after follow-up research: Gen2 Optima lab, budget exercise, Postgres Private Link lab, PAT policy creation, official Data Clean Rooms tutorial and CoCo cloud Automations walkthrough. Total 79/90 mappings at that time. Combined tiles disclose narrower coverage; budgets mapping does not cover quotas, authentication mapping does not configure MFA. Absolute HTTPS URLs supported for official documentation tutorials. Automations is labeled Walkthrough rather than Scoped lab. No runtime network calls. Existing PNG exports remain documentation-mode only. CoCo surface chips (verified 2026-10-28) map Snowsight to the Agentic ML guide (CoCo in a Snowsight Workspace Notebook), Desktop to the existing CoCo Desktop guide and CLI to the CoCo CLI guide; they are subentries, so coverage stayed 79/90 (persona counts unchanged). Migration group (2026-10-28): AIM Agent, Data Migration & Validation (scoped to data migration and verification sections) and ETL to dbt Conversion (scoped to SSIS to dbt sections) map to the snowflake-aim-e2e-ssis-migration guide (HTTP 200 2026-10-28); Spark Migration and Teradata Virtualization have no guide mapped (the Snowpark Connect lab is not a migration lab). Coverage was 82/95. Expedition 2026 (2026-11-06): six public guides mapped (Pipeline Builder, Cortex Training, Snowflake Dashboards, Cortex Agent SDK, Agents for Shared Data scoped to provider-built agents, Open Data Sharing scoped to the pre-existing interoperable data products lab); coverage now 88/108; persona views DE 27/34, AI 26/31, DS 26/26. CoCo Excel and Sheets chips link docs only and render as non-link chips in Hands-on. CoCo Automations walkthrough unchanged; it covers Snowflake-hosted automations (GA in Snowsight and CLI per public announcements; docs page still labeled Preview), not local Desktop automations."
+    },
+    {
+      "id": "renames",
+      "title": "Names that changed",
+      "producerNotes": "Only renames confirmed in docs are listed."
+    },
+    {
+      "id": "expedition-2026",
+      "title": "Expedition 2026 announcements",
+      "producerNotes": "Verified against public Expedition 2026 announcements and docs on 2026-11-06; public sources only. Where Snowflake sources conflict the most conservative status is shown (Cortex Agent SDK public preview, dynamic model routing private preview, Snowflake Mobile public preview, automatic model tiers private preview). New tiles: Pipeline Builder (public preview), Optima Clustering (Automatic Key Selection GA), Cortex AI Gateway (observability and cost governance GA, Tools public preview, dynamic model routing private preview), Cortex Sandboxes (private preview), Cortex Training (public preview), Open Data Sharing (Apache Polaris) (GA), Datastream (private preview, public preview soon), Streaming Transformations (private preview), Cortex Agent SDK (public preview), Async Agent API (GA), Snowflake Dashboards (public preview), Analytical Search (public preview), Agents for Shared Data (public preview). Status notes (tooltips) on existing tiles: Cortex Code (CoCo), CoCo Automations, Skills & Plugins, Business Ontology, Cortex Sense, Snowflake CoWork, Cortex Agents, Interactive Tables, Snowpipe Streaming, Snowpipe, Hybrid Tables (GA; numbers stated with up to and for certain workloads), Snowflake App Runtime, Native Apps, Streamlit in Snowflake, Trust Center (Snowflake Organizations), Apache Iceberg Tables, Horizon Iceberg REST Catalog, Snowpark Connect for Spark, Spark Migration, Postgres Mirrors, DCM Projects, Dynamic Tables, dbt Projects on Snowflake, Adaptive Compute, Zero-Copy Connectors, Cost Anomaly Detection. CoCo chips: Excel and Sheets (public preview, docs linked), Slack (Snowflake for Slack, public preview) and Mobile (Snowflake Mobile, public preview) as non-link chips. Pre-announcement items without public confirmation were removed rather than kept as to-be-confirmed (agent security naming, two Native Apps items, a Salesforce product name, a streaming rename, an App Runtime status claim, a CoCo approval-mode name, an organizations product name and a new catalog federation claim). Zero-Copy Parquet and Parquet Direct are shown without status. Counts: 108 tiles; tile-level documentation links 102; hands-on coverage 88/108; persona views DE 34, AI 31, DS 26 tiles (hands-on 27/34, 26/31, 26/26).",
+      "dataSources": [
+        {
+          "type": "official-web",
+          "urls": [
+            "https://www.snowflake.com/en/blog/expedition-26/",
+            "https://www.snowflake.com/en/news/press-releases/expedition-2026-autonomous-data-engineering/",
+            "https://www.snowflake.com/en/news/press-releases/expedition-2026-business-ontology-ai-gateway/",
+            "https://www.snowflake.com/en/news/press-releases/expedition-2026-coco-cowork/",
+            "https://www.snowflake.com/en/blog/autonomous-data-engineering-ai-agents-apps/",
+            "https://www.snowflake.com/en/blog/real-time-analytics-snowflake/",
+            "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/",
+            "https://www.snowflake.com/en/blog/ai-agents-governance-ai-security-cost-control/",
+            "https://www.snowflake.com/en/blog/snowflake-coco-cloud-agents-automations/",
+            "https://www.snowflake.com/en/blog/snowflake-cowork-profiles-automations-dashboards",
+            "https://www.snowflake.com/en/blog/business-ontology-context",
+            "https://docs.snowflake.com/en/release-notes/new-features"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "icons",
+      "title": "Icons (Lucide v1.72.0, ISC)",
+      "producerNotes": "Symbol id (unchanged, used by tileIcons and downstream builders) mapped to the Lucide icon used.",
+      "mapping": {
+        "i-ai-star": "sparkles",
+        "i-alert": "bell-ring",
+        "i-application-collaboration": "lock-keyhole",
+        "i-architecture": "network",
+        "i-backup": "database-backup",
+        "i-calendar": "calendar-clock",
+        "i-check": "clipboard-check",
+        "i-code": "square-code",
+        "i-connected": "plug-zap",
+        "i-copy": "file-input",
+        "i-cortex": "bot",
+        "i-cube": "layout-dashboard",
+        "i-database-role": "file-diff",
+        "i-dev": "terminal",
+        "i-document-ai": "scan-text",
+        "i-dynamic-tables": "table-properties",
+        "i-edit": "git-branch",
+        "i-horizon": "library-big",
+        "i-horizon-context": "radar",
+        "i-hybrid-tables": "blend",
+        "i-iceberg-tables": "mountain-snow",
+        "i-integrity": "list-checks",
+        "i-interactive-tables": "zap",
+        "i-interactive-warehouse": "cpu",
+        "i-key": "key-round",
+        "i-launch": "rocket",
+        "i-marketplace": "store",
+        "i-metadata": "braces",
+        "i-native-app": "package",
+        "i-notebook": "notebook-pen",
+        "i-on-demand": "cloud-lightning",
+        "i-openflow": "waypoints",
+        "i-optimization-performance": "gauge",
+        "i-optimize": "wand-sparkles",
+        "i-pricing": "wallet",
+        "i-private-data-exchange": "building-2",
+        "i-process": "git-fork",
+        "i-process-1": "workflow",
+        "i-processes": "list-todo",
+        "i-proxy": "globe-lock",
+        "i-refresh": "refresh-cw",
+        "i-search": "search",
+        "i-secure-data": "eye-off",
+        "i-security": "lock",
+        "i-security-governance": "shield-check",
+        "i-sharing-collaboration": "share-2",
+        "i-simplify-pipelines": "import",
+        "i-sno-database": "table",
+        "i-sno-databases": "database",
+        "i-snowconvert": "arrow-right-left",
+        "i-snowflake-coco": "code-xml",
+        "i-snowflake-cowork": "messages-square",
+        "i-snowflake-datastream": "activity",
+        "i-snowflake-ml": "brain-circuit",
+        "i-snowflake-postgres": "database-zap",
+        "i-snowflake-trail": "telescope",
+        "i-snowpark": "file-code",
+        "i-snowpark-containers": "container",
+        "i-snowpark-ml-modeling": "flask-conical",
+        "i-snowpark-modeling-registry": "boxes",
+        "i-snowpipe-streaming": "waves",
+        "i-spark-connect": "flame",
+        "i-speed-1": "fast-forward",
+        "i-sql-analysts": "chart-column",
+        "i-storage-and-compute": "archive",
+        "i-streamlit-in-snowflake": "panels-top-left",
+        "i-tag": "tag",
+        "i-time": "history",
+        "i-tools": "wrench",
+        "i-trusted": "badge-check",
+        "i-universal-search": "text-search",
+        "i-unstructured-data": "folder-open",
+        "i-warehouse-adaptive": "server-cog",
+        "i-warehouse-gen2": "warehouse",
+        "i-warehouse-snowpark": "server",
+        "i-web-app": "app-window",
+        "i-web-search": "microscope",
+        "i-workloads-data-engineering": "blocks",
+        "i-workloads-data-lake": "droplets",
+        "i-world": "earth",
+        "i-zero-copy-integrations": "link-2"
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root { color-scheme: light dark; --sf: #29B5E8; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; max-width: 1100px; width: 100%;
+    padding: clamp(14px, 3vw, 28px);
+    font-family: -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: light-dark(#f4f7fb, #0b1220);
+    color: light-dark(#1f2937, #e5e7eb);
+  }
+  header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+  h1 { margin: 0; font-size: clamp(26px, 5vw, 44px); letter-spacing: .5px; color: light-dark(#0f172a, #f8fafc); }
+  h1 span { color: var(--sf); }
+  .sub { margin: 4px 0 0; font-size: clamp(14px, 2.2vw, 18px); color: light-dark(#475569, #94a3b8); }
+  .badge { background: var(--sf); color: #fff; font-weight: 700; padding: 8px 14px; border-radius: 10px; text-align: center; line-height: 1.2; }
+  .layer {
+    display: grid; grid-template-columns: minmax(170px, 210px) 1fr; gap: 8px;
+    padding: 8px; margin-bottom: 8px; border-radius: 12px;
+    background: light-dark(#ffffff, #111a2e);
+    border: 1px solid light-dark(#dbe3ee, #1e293b);
+  }
+  .head { border-radius: 8px; padding: 10px 12px; border-left: 5px solid var(--c); background: light-dark(color-mix(in srgb, var(--c) 12%, #fff), color-mix(in srgb, var(--c) 18%, #111a2e)); }
+  .head { display: flex; align-items: center; gap: 10px; }
+  .head .icon { width: 34px; height: 34px; flex: none; color: var(--c); }
+  .head b { display: block; font-size: 14px; text-transform: uppercase; letter-spacing: .4px; color: light-dark(#0f172a, #f8fafc); }
+  .head small { display: block; margin-top: 4px; font-size: 12px; color: light-dark(#475569, #94a3b8); }
+  .layer > *, .head > div, .tile > span { min-width: 0; }
+  .tile > span { overflow-wrap: anywhere; }
+  .tile-main > span { min-width: 0; overflow-wrap: anywhere; }
+  .tiles { display: grid; grid-template-columns: repeat(var(--cols, 6), minmax(0, 1fr)); gap: 6px; }
+  .tile {
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    min-height: 56px; padding: 6px; border-radius: 8px; font-size: 12.5px; line-height: 1.25;
+    background: light-dark(#f8fafc, #0f1729); border: 1px solid light-dark(#e2e8f0, #1e293b);
+  }
+  a.tile { color: inherit; text-decoration: none; transition: border-color .15s, transform .15s; }
+  a.tile:hover, a.tile:focus-visible { border-color: var(--c); transform: translateY(-1px); outline: none; }
+  .tile-group { flex-direction: column; gap: 4px; padding: 4px; }
+  .tile-group > a.tile-main { display: flex; align-items: center; justify-content: center; flex: 1; width: 100%; padding: 2px; border-radius: 6px; color: inherit; text-decoration: none; }
+  .tile-group:has(> a.tile-main:hover), .tile-group:has(> a.tile-main:focus-visible) { border-color: var(--c); }
+  .tile-group > a.tile-main:focus-visible { outline: 2px solid var(--c); outline-offset: 1px; }
+  .surfaces { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; }
+  .surfaces a { font-size: 10px; line-height: 1.2; padding: 2px 5px; border-radius: 999px; color: inherit; text-decoration: none; border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); background: light-dark(color-mix(in srgb, var(--c) 8%, #fff), color-mix(in srgb, var(--c) 14%, #0f1729)); }
+  .surfaces span { font-size: 10px; line-height: 1.2; padding: 2px 5px; border-radius: 999px; border: 1px dashed color-mix(in srgb, var(--c) 45%, transparent); color: light-dark(#64748b, #94a3b8); }
+  .surfaces a:hover, .surfaces a:focus-visible { border-color: var(--c); outline: 2px solid var(--c); outline-offset: 1px; }
+  .tile .ti { width: 20px; height: 20px; margin-right: 7px; flex: none; color: var(--c); }
+  /* Rows wider than 6 columns stack the icon so labels keep whole words. */
+  .tiles.dense > .tile:not(.tile-group), .tiles.dense a.tile-main { flex-direction: column; }
+  .tiles.dense .tile .ti { margin: 0 0 4px; }
+  .views { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+  .views button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; cursor: pointer; color: inherit; background: light-dark(#ffffff, #111a2e); border: 1px solid light-dark(#dbe3ee, #1e293b); }
+  .views button[aria-pressed="true"] { background: var(--sf); border-color: var(--sf); color: #fff; font-weight: 600; }
+  .link-modes { margin-bottom: 6px; }
+  .link-status { margin: 0 0 14px; font-size: 12px; color: light-dark(#475569, #94a3b8); }
+  .tile.unmapped { color: light-dark(#64748b, #94a3b8); border-style: dashed; }
+  .tile.unmapped .ti { opacity: .4; }
+  .guide-marker { display: block; margin-top: 4px; font-size: 10px; font-weight: 500; color: light-dark(#64748b, #94a3b8); }
+  .stage-no { display: inline-block; min-width: 20px; margin-right: 4px; color: var(--c); }
+  .flow { text-align: center; margin: -4px 0 4px; font-size: 18px; line-height: 1; color: light-dark(#94a3b8, #475569); }
+  .renames { margin-top: 18px; padding: 14px 16px; border-radius: 12px; border: 1px dashed var(--sf); background: light-dark(#ffffff, #111a2e); }
+  .renames h2 { margin: 0 0 8px; font-size: 16px; }
+  .renames ul { margin: 0; padding-left: 18px; font-size: 14px; }
+  footer { margin-top: 14px; font-size: 12px; text-align: center; color: light-dark(#64748b, #94a3b8); }
+  @media (max-width: 820px) {
+    .layer { grid-template-columns: 1fr; }
+    .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 420px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+</head>
+<body>
+<!-- Icons: Lucide v1.72.0 (https://lucide.dev), lucide-static npm package.
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-warehouse-adaptive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.852 14.772-.383.923" /><path d="M13.148 14.772a3 3 0 1 0-2.296-5.544l-.383-.923" /><path d="m13.148 9.228.383-.923" /><path d="m13.53 15.696-.382-.924a3 3 0 1 1-2.296-5.544" /><path d="m14.772 10.852.923-.383" /><path d="m14.772 13.148.923.383" /><path d="M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5" /><path d="M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5" /><path d="M6 18h.01" /><path d="M6 6h.01" /><path d="m9.228 10.852-.923-.383" /><path d="m9.228 13.148-.923.383" /></symbol><symbol id="i-iceberg-tables" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z" /><path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19" /></symbol><symbol id="i-openflow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.586 5.414-5.172 5.172" /><path d="m18.586 13.414-5.172 5.172" /><path d="M6 12h12" /><circle cx="12" cy="20" r="2" /><circle cx="12" cy="4" r="2" /><circle cx="20" cy="12" r="2" /><circle cx="4" cy="12" r="2" /></symbol><symbol id="i-dynamic-tables" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3v18" /><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M21 9H3" /><path d="M21 15H3" /></symbol><symbol id="i-snowflake-postgres" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 15 21.84" /><path d="M21 5V8" /><path d="M21 12L18 17H22L19 22" /><path d="M3 12A9 3 0 0 0 14.59 14.87" /></symbol><symbol id="i-snowflake-ml" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13h4" /><path d="M12 18h6a2 2 0 012 2v1" /><path d="M12 8h8" /><path d="M12 9a4.17 4.17 0 01-3 4" /><path d="M16 8V5a2 2 0 012-2" /><path d="M6 18a4 4 0 01-2-7.465" /><path d="M6.004 5.125a4 4 0 00-2.526 5.77" /><path d="M6.294 6.294A3 3 0 1112 5v13a4 4 0 11-7.967-.518" /><circle cx="16" cy="13" r="0.5" fill="currentColor" /><circle cx="18" cy="3" r="0.5" fill="currentColor" /><circle cx="20" cy="21" r="0.5" fill="currentColor" /><circle cx="20" cy="8" r="0.5" fill="currentColor" /></symbol><symbol id="i-cortex" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></symbol><symbol id="i-snowflake-cowork" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1" /></symbol><symbol id="i-horizon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="18" x="3" y="3" rx="1" /><path d="M7 3v18" /><path d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z" /></symbol><symbol id="i-security-governance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></symbol><symbol id="i-optimization-performance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></symbol><symbol id="i-sharing-collaboration" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" x2="15.42" y1="13.51" y2="17.49" /><line x1="15.41" x2="8.59" y1="6.51" y2="10.49" /></symbol><symbol id="i-streamlit-in-snowflake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></symbol><symbol id="i-ai-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /><path d="M20 2v4" /><path d="M22 4h-4" /><circle cx="4" cy="20" r="2" /></symbol><symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.268 21a2 2 0 0 0 3.464 0" /><path d="M22 8c0-2.3-.8-4.3-2-6" /><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /><path d="M4 2C2.8 3.7 2 5.7 2 8" /></symbol><symbol id="i-application-collaboration" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="16" r="1" /><rect x="3" y="10" width="18" height="12" rx="2" /><path d="M7 10V7a5 5 0 0 1 10 0v3" /></symbol><symbol id="i-architecture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></symbol><symbol id="i-backup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 12a9 3 0 0 0 5 2.69" /><path d="M21 9.3V5" /><path d="M3 5v14a9 3 0 0 0 6.47 2.88" /><path d="M12 12v4h4" /><path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" /></symbol><symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14v2.2l1.6 1" /><path d="M16 2v3" /><path d="M21 7.338V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h2.338" /><path d="M3 9h5.859" /><path d="M8 2v3" /><circle cx="16" cy="16" r="6" /></symbol><symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="m9 14 2 2 4-4" /></symbol><symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 9-3 3 3 3" /><path d="m14 15 3-3-3-3" /><rect x="3" y="3" width="18" height="18" rx="2" /></symbol><symbol id="i-connected" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z" /><path d="m2 22 3-3" /><path d="M7.5 13.5 10 11" /><path d="M10.5 16.5 13 14" /><path d="m18 3-4 4h6l-4 4" /></symbol><symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1" /><path d="M14 2v5a1 1 0 0 0 1 1h5" /><path d="M2 15h10" /><path d="m9 18 3-3-3-3" /></symbol><symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1" /><rect width="7" height="5" x="14" y="3" rx="1" /><rect width="7" height="9" x="14" y="12" rx="1" /><rect width="7" height="5" x="3" y="16" rx="1" /></symbol><symbol id="i-database-role" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /><path d="M9 10h6" /><path d="M12 13V7" /><path d="M9 17h6" /></symbol><symbol id="i-dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19h8" /><path d="m4 17 6-6-6-6" /></symbol><symbol id="i-document-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /><path d="M7 8h8" /><path d="M7 12h10" /><path d="M7 16h6" /></symbol><symbol id="i-edit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6a9 9 0 0 0-9 9V3" /><circle cx="18" cy="6" r="3" /><circle cx="6" cy="18" r="3" /></symbol><symbol id="i-horizon-context" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34" /><path d="M4 6h.01" /><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35" /><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67" /><path d="M12 18h.01" /><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67" /><circle cx="12" cy="12" r="2" /><path d="m13.41 10.59 5.66-5.66" /></symbol><symbol id="i-hybrid-tables" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="9" r="7" /><circle cx="9" cy="15" r="7" /></symbol><symbol id="i-integrity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" /><path d="M13 12h8" /><path d="M13 19h8" /><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /></symbol><symbol id="i-interactive-tables" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></symbol><symbol id="i-interactive-warehouse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2" /><path d="M12 2v2" /><path d="M17 20v2" /><path d="M17 2v2" /><path d="M2 12h2" /><path d="M2 17h2" /><path d="M2 7h2" /><path d="M20 12h2" /><path d="M20 17h2" /><path d="M20 7h2" /><path d="M7 20v2" /><path d="M7 2v2" /><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="8" y="8" width="8" height="8" rx="1" /></symbol><symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" /><circle cx="16.5" cy="7.5" r=".5" fill="currentColor" /></symbol><symbol id="i-launch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></symbol><symbol id="i-marketplace" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" /><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" /><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" /></symbol><symbol id="i-metadata" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1" /><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1" /></symbol><symbol id="i-native-app" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><polyline points="3.29 7 12 12 20.71 7" /><path d="m7.5 4.27 9 5.15" /></symbol><symbol id="i-notebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /><path d="M2 6h4" /><path d="M2 10h4" /><path d="M2 14h4" /><path d="M2 18h4" /><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /></symbol><symbol id="i-on-demand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973" /><path d="m13 12-3 5h4l-3 5" /></symbol><symbol id="i-optimize" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72" /><path d="m14 7 3 3" /><path d="M5 6v4" /><path d="M19 14v4" /><path d="M10 2v2" /><path d="M7 8H3" /><path d="M21 16h-4" /><path d="M11 3H9" /></symbol><symbol id="i-pricing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></symbol><symbol id="i-private-data-exchange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" /><path d="M10 8h4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" /><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" /></symbol><symbol id="i-process" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="18" r="3" /><circle cx="6" cy="6" r="3" /><circle cx="18" cy="6" r="3" /><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" /><path d="M12 12v3" /></symbol><symbol id="i-process-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2" /><path d="M7 11v4a2 2 0 0 0 2 2h4" /><rect width="8" height="8" x="13" y="13" rx="2" /></symbol><symbol id="i-processes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" /><path d="M13 12h8" /><path d="M13 19h8" /><path d="m3 17 2 2 4-4" /><rect x="3" y="4" width="6" height="6" rx="1" /></symbol><symbol id="i-proxy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.686 15A14.5 14.5 0 0 1 12 22a14.5 14.5 0 0 1 0-20 10 10 0 1 0 9.542 13" /><path d="M2 12h8.5" /><path d="M20 6V4a2 2 0 1 0-4 0v2" /><rect width="8" height="5" x="14" y="6" rx="1" /></symbol><symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></symbol><symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></symbol><symbol id="i-secure-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /><path d="m2 2 20 20" /></symbol><symbol id="i-security" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol><symbol id="i-simplify-pipelines" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /><path d="m8 11 4 4 4-4" /><path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4" /></symbol><symbol id="i-sno-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18" /><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M3 15h18" /></symbol><symbol id="i-sno-databases" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></symbol><symbol id="i-snowconvert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4" /><path d="M20 7H4" /><path d="m8 21-4-4 4-4" /><path d="M4 17h16" /></symbol><symbol id="i-snowflake-coco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4" /><path d="m6 8-4 4 4 4" /><path d="m14.5 4-5 16" /></symbol><symbol id="i-snowflake-datastream" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></symbol><symbol id="i-snowflake-trail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44" /><path d="m13.56 11.747 4.332-.924" /><path d="m16 21-3.105-6.21" /><path d="M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z" /><path d="m6.158 8.633 1.114 4.456" /><path d="m8 21 3.105-6.21" /><circle cx="12" cy="13" r="2" /></symbol><symbol id="i-snowpark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /><path d="M14 2v5a1 1 0 0 0 1 1h5" /><path d="M10 12.5 8 15l2 2.5" /><path d="m14 12.5 2 2.5-2 2.5" /></symbol><symbol id="i-snowpark-containers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z" /><path d="M10 21.9V14L2.1 9.1" /><path d="m10 14 11.9-6.9" /><path d="M14 19.8v-8.1" /><path d="M18 17.5V9.4" /></symbol><symbol id="i-snowpark-ml-modeling" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" /><path d="M6.453 15h11.094" /><path d="M8.5 2h7" /></symbol><symbol id="i-snowpark-modeling-registry" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" /><path d="m7 16.5-4.74-2.85" /><path d="m7 16.5 5-3" /><path d="M7 16.5v5.17" /><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" /><path d="m17 16.5-5-3" /><path d="m17 16.5 4.74-2.85" /><path d="M17 16.5v5.17" /><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" /><path d="M12 8 7.26 5.15" /><path d="m12 8 4.74-2.85" /><path d="M12 13.5V8" /></symbol><symbol id="i-snowpipe-streaming" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></symbol><symbol id="i-spark-connect" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></symbol><symbol id="i-speed-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 12 18z" /><path d="M2 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 2 18z" /></symbol><symbol id="i-sql-analysts" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></symbol><symbol id="i-storage-and-compute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="5" x="2" y="3" rx="1" /><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" /><path d="M10 12h4" /></symbol><symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /><circle cx="7.5" cy="7.5" r=".5" fill="currentColor" /></symbol><symbol id="i-time" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l4 2" /></symbol><symbol id="i-tools" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" /></symbol><symbol id="i-trusted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m16 9-5.5 5.5L8 12" /></symbol><symbol id="i-universal-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 5H3" /><path d="M10 12H3" /><path d="M10 19H3" /><circle cx="17" cy="15" r="3" /><path d="m21 19-1.9-1.9" /></symbol><symbol id="i-unstructured-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></symbol><symbol id="i-warehouse-gen2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11" /><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z" /><path d="M6 13h12" /><path d="M6 17h12" /></symbol><symbol id="i-warehouse-snowpark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2" /><rect width="20" height="8" x="2" y="14" rx="2" ry="2" /><line x1="6" x2="6.01" y1="6" y2="6" /><line x1="6" x2="6.01" y1="18" y2="18" /></symbol><symbol id="i-web-app" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M10 4v4" /><path d="M2 8h20" /><path d="M6 4v4" /></symbol><symbol id="i-web-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8" /><path d="M3 22h18" /><path d="M14 22a7 7 0 1 0 0-14h-1" /><path d="M9 14h2" /><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" /><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" /></symbol><symbol id="i-workloads-data-engineering" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" /><rect x="14" y="2" width="8" height="8" rx="1" /></symbol><symbol id="i-workloads-data-lake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" /><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" /></symbol><symbol id="i-world" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54" /><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17" /><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05" /><circle cx="12" cy="12" r="10" /></symbol><symbol id="i-zero-copy-integrations" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2" /><path d="M15 7h2a5 5 0 1 1 0 10h-2" /><line x1="8" x2="16" y1="12" y2="12" /></symbol></svg>
+<header>
+  <div>
+    <h1>SNOWFLAKE <span>AI DATA CLOUD</span></h1>
+    <p class="sub" id="sub">From data engineering to agentic AI - one platform, one governance model</p>
+  </div>
+  <div class="badge" id="badge">2026<br>Overview</div>
+</header>
+
+<nav class="views" id="views" aria-label="Views"></nav>
+
+<div class="views link-modes" id="link-modes" role="group" aria-label="Tile link destination"></div>
+<p class="link-status" id="link-status" role="status" aria-live="polite"></p>
+
+<main id="layers"></main>
+
+<section class="renames" id="renames">
+  <h2>Heads up, a few names changed</h2>
+  <ul>
+    <li>Snowflake Intelligence &rarr; Snowflake CoWork</li>
+    <li>Snowflake Copilot &rarr; Cortex Code (CoCo)</li>
+    <li>Standard warehouse sizing &rarr; Adaptive Warehouses (no more t-shirt sizes to manage)</li>
+  </ul>
+</section>
+
+<footer><span id="scope">16 groups &bull; 108 capabilities &amp; ecosystem entries</span> &bull; <span id="source-label">Official Snowflake documentation and program pages, checked 27 October to 6 November 2026</span> &bull; Availability varies by edition, cloud, region and release status &bull; Icons: Lucide (ISC License), version 1.72.0 &bull; Bart Wrobel</footer>
+
+<script>
+  const layers = [
+    ["Core & Compute", "Elastic, workload-aware compute", "#29B5E8", "warehouse-adaptive",
+      ["Gen2 Warehouses", "Adaptive Compute", "Interactive Warehouses", "Snowpark-optimized Warehouses", "Snowpark Container Services", "Serverless Compute"]],
+    ["Open Storage", "Managed or open formats", "#22c55e", "iceberg-tables",
+      ["Snowflake Tables", "Apache Iceberg Tables", "Catalog-linked Databases", "Horizon Iceberg REST Catalog", "Stages & Directory Tables", "Storage Lifecycle Policies"]],
+    ["Ingestion & Connectors", "Bring data from any source", "#f97316", "openflow",
+      ["Openflow", "Snowpipe", "Snowpipe Streaming", "COPY INTO", "Zero-Copy Connectors", "Datastream", "Streaming Transformations"]],
+    ["Migration & Modernization", "Move workloads to Snowflake with AIM", "#f43f5e", "snowconvert",
+      ["AIM Agent for Data Warehouses", "SnowConvert AI", "Data Migration & Validation", "ETL to dbt Conversion", "Spark Migration", "Teradata Virtualization"]],
+    ["Transform & Orchestrate", "Build and automate pipelines", "#a855f7", "dynamic-tables",
+      ["SQL & Snowpark Python", "Dynamic Tables", "Tasks & Task Graphs", "dbt Projects on Snowflake", "Snowpark Connect for Spark", "Notebooks", "Pipeline Builder"]],
+    ["Operational & Real-Time", "Postgres and low-latency serving", "#14b8a6", "snowflake-postgres",
+      ["Snowflake Postgres", "pg_lake", "Postgres Mirrors", "Hybrid Tables", "Interactive Tables", "Streams"]],
+    ["AI & ML", "Build, train and serve models", "#eab308", "snowflake-ml",
+      ["Cortex AI Functions", "Document Intelligence", "Cortex Search", "Model Registry & Serving", "ML Jobs & Feature Store", "ML Observability", "Cortex Training"]],
+    ["Agents", "Governed agents on your data", "#ef4444", "cortex",
+      ["Cortex Agents", "Semantic Views & Cortex Analyst", "Cortex Sense", "Managed MCP Servers", "Agent Evaluation", "Code Execution Sandbox", "Cortex AI Gateway", "Cortex Sandboxes", "Cortex Agent SDK", "Async Agent API"]],
+    ["AI for Everyone", "Agentic work for business and builders", "#ec4899", "snowflake-cowork",
+      ["Snowflake CoWork", "CoWork Deep Research", "CoWork Automations", "Cortex Code (CoCo)", "CoCo Automations", "Skills & Plugins", "Snowflake Dashboards", "Analytical Search"]],
+    ["Governance", "Horizon Catalog for data and AI", "#84cc16", "horizon",
+      ["Horizon Catalog", "Classification & Tags", "Masking & Row Access Policies", "Lineage", "Data Metric Functions", "Business Ontology"]],
+    ["Security & Reliability", "Keep data and agents safe", "#6366f1", "security-governance",
+      ["Trust Center", "Network Policies & Private Link", "Authentication Policies & MFA", "Tri-Secret Secure", "Replication & Failover", "Time Travel & Fail-safe"]],
+    ["Performance & Cost", "Run fast, spend wisely", "#8b5cf6", "optimization-performance",
+      ["Snowflake Optima", "Search Optimization", "Automatic Clustering", "Query Acceleration", "Budgets & Quotas", "Cost Anomaly Detection", "Optima Clustering"]],
+    ["Observability & Ops", "Monitor, diagnose and act", "#0891b2", "snowflake-trail",
+      ["Snowflake Trail", "Event Tables & Telemetry", "Alerts & Notifications", "Query Insights & Profile", "Resource Monitors", "Task Monitoring"]],
+    ["Sharing & Collaboration", "Share data and AI without copies", "#f59e0b", "sharing-collaboration",
+      ["Secure Data Sharing", "Snowflake Marketplace", "Internal Marketplace", "Data Clean Rooms", "Cross-Cloud Auto-Fulfillment", "Native Apps", "Open Data Sharing (Apache Polaris)", "Agents for Shared Data"]],
+    ["Developer & Apps", "Build, ship and automate", "#10b981", "streamlit-in-snowflake",
+      ["Streamlit in Snowflake", "Snowflake App Runtime", "Snowflake CLI", "DCM Projects", "Workspaces & Git", "CI/CD with OIDC"]],
+    ["Partners & Ecosystem", "Programs, partners and integrations", "#d97706", "connected",
+      ["Snowflake Partner Network", "Services & Technology Partners", "Connected Apps", "BI Integrations", "Startup Accelerator", "Partner App Trials"]]
+  ];
+  const tileIcons = {"Gen2 Warehouses": "warehouse-gen2", "Adaptive Compute": "warehouse-adaptive", "Interactive Warehouses": "interactive-warehouse", "Snowpark-optimized Warehouses": "warehouse-snowpark", "Snowpark Container Services": "snowpark-containers", "Serverless Compute": "on-demand", "Snowflake Tables": "sno-database", "Apache Iceberg Tables": "iceberg-tables", "Catalog-linked Databases": "sno-databases", "Horizon Iceberg REST Catalog": "metadata", "Stages & Directory Tables": "unstructured-data", "Storage Lifecycle Policies": "storage-and-compute", "Openflow": "openflow", "Snowpipe": "simplify-pipelines", "Snowpipe Streaming": "snowpipe-streaming", "COPY INTO": "copy", "Zero-Copy Connectors": "zero-copy-integrations", "SnowConvert AI": "snowconvert", "SQL & Snowpark Python": "snowpark", "Dynamic Tables": "dynamic-tables", "Tasks & Task Graphs": "processes", "dbt Projects on Snowflake": "workloads-data-engineering", "Snowpark Connect for Spark": "spark-connect", "Notebooks": "notebook", "Snowflake Postgres": "snowflake-postgres", "pg_lake": "workloads-data-lake", "Postgres Mirrors": "refresh", "Hybrid Tables": "hybrid-tables", "Interactive Tables": "interactive-tables", "Streams": "snowflake-datastream", "Cortex AI Functions": "ai-star", "Document Intelligence": "document-ai", "Cortex Search": "search", "Model Registry & Serving": "snowpark-modeling-registry", "ML Jobs & Feature Store": "snowpark-ml-modeling", "ML Observability": "snowflake-trail", "Cortex Agents": "cortex", "Semantic Views & Cortex Analyst": "sql-analysts", "Cortex Sense": "horizon-context", "Managed MCP Servers": "connected", "Agent Evaluation": "check", "Code Execution Sandbox": "code", "Snowflake CoWork": "snowflake-cowork", "CoWork Deep Research": "web-search", "CoWork Automations": "calendar", "Cortex Code (CoCo)": "snowflake-coco", "CoCo Automations": "launch", "Skills & Plugins": "tools", "Horizon Catalog": "horizon", "Classification & Tags": "tag", "Masking & Row Access Policies": "secure-data", "Lineage": "process", "Data Metric Functions": "integrity", "Business Ontology": "architecture", "Trust Center": "trusted", "Network Policies & Private Link": "proxy", "Authentication Policies & MFA": "key", "Tri-Secret Secure": "security", "Replication & Failover": "backup", "Time Travel & Fail-safe": "time", "Snowflake Optima": "optimize", "Search Optimization": "universal-search", "Automatic Clustering": "cube", "Query Acceleration": "speed-1", "Budgets & Quotas": "pricing", "Cost Anomaly Detection": "alert", "Secure Data Sharing": "sharing-collaboration", "Snowflake Marketplace": "marketplace", "Internal Marketplace": "private-data-exchange", "Data Clean Rooms": "application-collaboration", "Cross-Cloud Auto-Fulfillment": "world", "Native Apps": "native-app", "Streamlit in Snowflake": "streamlit-in-snowflake", "Snowflake App Runtime": "web-app", "Snowflake CLI": "dev", "DCM Projects": "database-role", "Workspaces & Git": "edit", "CI/CD with OIDC": "process-1"};
+  Object.assign(tileIcons, {
+    "Snowflake Trail": "snowflake-trail",
+    "Event Tables & Telemetry": "metadata",
+    "Alerts & Notifications": "alert",
+    "Query Insights & Profile": "optimization-performance",
+    "Resource Monitors": "pricing",
+    "Task Monitoring": "processes",
+    "Snowflake Partner Network": "sharing-collaboration",
+    "Services & Technology Partners": "workloads-data-engineering",
+    "Connected Apps": "connected",
+    "BI Integrations": "sql-analysts",
+    "Startup Accelerator": "launch",
+    "Partner App Trials": "web-app",
+    "AIM Agent for Data Warehouses": "snowflake-coco",
+    "Data Migration & Validation": "integrity",
+    "ETL to dbt Conversion": "process",
+    "Spark Migration": "spark-connect",
+    "Teradata Virtualization": "proxy",
+    // Expedition 2026 tiles reuse existing sprite icons.
+    "Pipeline Builder": "process-1",
+    "Optima Clustering": "speed-1",
+    "Cortex AI Gateway": "secure-data",
+    "Cortex Sandboxes": "dev",
+    "Cortex Training": "snowflake-ml",
+    "Open Data Sharing (Apache Polaris)": "world",
+    "Datastream": "snowflake-datastream",
+    "Streaming Transformations": "snowpipe-streaming",
+    "Cortex Agent SDK": "code",
+    "Async Agent API": "time",
+    "Snowflake Dashboards": "cube",
+    "Analytical Search": "universal-search",
+    "Agents for Shared Data": "marketplace"
+  });
+  const D = "https://docs.snowflake.com/en/";
+  const docs = {
+    "Gen2 Warehouses": "user-guide/warehouses-gen2",
+    "Adaptive Compute": "user-guide/warehouses-adaptive",
+    "Interactive Warehouses": "user-guide/interactive",
+    "Snowpark-optimized Warehouses": "user-guide/warehouses-snowpark-optimized",
+    "Snowpark Container Services": "developer-guide/snowpark-container-services/overview",
+    "Serverless Compute": "user-guide/cost-understanding-compute",
+    "Snowflake Tables": "user-guide/tables-micro-partitions",
+    "Apache Iceberg Tables": "user-guide/tables-iceberg",
+    "Catalog-linked Databases": "user-guide/tables-iceberg-catalog-linked-database",
+    "Horizon Iceberg REST Catalog": "user-guide/tables-iceberg-access-using-external-query-engine-snowflake-horizon",
+    "Stages & Directory Tables": "user-guide/data-load-dirtables",
+    "Storage Lifecycle Policies": "user-guide/storage-management/storage-lifecycle-policies",
+    "Openflow": "user-guide/data-integration/openflow/about",
+    "Snowpipe": "user-guide/data-load-snowpipe-intro",
+    "Snowpipe Streaming": "user-guide/snowpipe-streaming/data-load-snowpipe-streaming-overview",
+    "COPY INTO": "sql-reference/sql/copy-into-table",
+    "Zero-Copy Connectors": "user-guide/data-integration/zero-copy/sap-sql/setup",
+    "AIM Agent for Data Warehouses": "migrations/aim-for-datawarehouses/overview",
+    "SnowConvert AI": "migrations/snowconvert-docs/overview",
+    "Data Migration & Validation": "migrations/aim-for-datawarehouses/data-migration-validation/overview",
+    "ETL to dbt Conversion": "migrations/aim-for-datawarehouses/manual-migration/etl-migration",
+    "Spark Migration": "migrations/sma-docs/migrating-with-cortex-code/spark-to-snowpark-connect",
+    "Teradata Virtualization": "migrations/virtualization/aim-virtualization-overview",
+    "SQL & Snowpark Python": "developer-guide/snowpark/python/index",
+    "Dynamic Tables": "user-guide/dynamic-tables/overview",
+    "Tasks & Task Graphs": "user-guide/tasks-intro",
+    "dbt Projects on Snowflake": "user-guide/data-engineering/dbt-projects-on-snowflake",
+    "Snowpark Connect for Spark": "developer-guide/snowpark-connect/snowpark-connect-apache-spark",
+    "Notebooks": "user-guide/ui-snowsight/notebooks",
+    "Snowflake Postgres": "user-guide/snowflake-postgres/about",
+    "pg_lake": "user-guide/snowflake-postgres/postgres-pg_lake",
+    "Postgres Mirrors": "user-guide/snowflake-postgres/postgres-data-mirroring",
+    "Hybrid Tables": "user-guide/tables-hybrid",
+    "Interactive Tables": "user-guide/interactive",
+    "Streams": "user-guide/streams-intro",
+    "Cortex AI Functions": "user-guide/snowflake-cortex/aisql",
+    "Document Intelligence": "user-guide/snowflake-cortex/ai-documents",
+    "Cortex Search": "user-guide/snowflake-cortex/cortex-search/cortex-search-overview",
+    "Model Registry & Serving": "developer-guide/snowflake-ml/model-registry/overview",
+    "ML Jobs & Feature Store": "developer-guide/snowflake-ml/feature-store/overview",
+    "ML Observability": "developer-guide/snowflake-ml/model-registry/model-observability",
+    "Cortex Agents": "user-guide/snowflake-cortex/cortex-agents",
+    "Semantic Views & Cortex Analyst": "user-guide/views-semantic/overview",
+    "Managed MCP Servers": "user-guide/snowflake-cortex/cortex-agents-mcp",
+    "Agent Evaluation": "user-guide/snowflake-cortex/cortex-agents-evaluations",
+    "Code Execution Sandbox": "user-guide/snowflake-cortex/cortex-agents-code-execution-tool",
+    "Snowflake CoWork": "user-guide/snowflake-cortex/snowflake-cowork",
+    "CoWork Deep Research": "user-guide/snowflake-cortex/snowflake-cowork",
+    "CoWork Automations": "user-guide/snowflake-cortex/snowflake-cowork/automations",
+    "Cortex Code (CoCo)": "user-guide/cortex-code/cortex-code",
+    "CoCo Automations": "user-guide/cortex-code/cortex-code-automations",
+    "Horizon Catalog": "user-guide/snowflake-horizon",
+    "Classification & Tags": "user-guide/classify-intro",
+    "Masking & Row Access Policies": "user-guide/security-column-intro",
+    "Lineage": "user-guide/ui-snowsight-lineage",
+    "Data Metric Functions": "user-guide/data-quality-intro",
+    "Trust Center": "user-guide/trust-center/overview",
+    "Network Policies & Private Link": "user-guide/network-policies",
+    "Authentication Policies & MFA": "user-guide/authentication-policies",
+    "Tri-Secret Secure": "user-guide/security-encryption-manage",
+    "Replication & Failover": "user-guide/account-replication-intro",
+    "Time Travel & Fail-safe": "user-guide/data-time-travel",
+    "Snowflake Optima": "user-guide/snowflake-optima",
+    "Search Optimization": "user-guide/search-optimization-service",
+    "Automatic Clustering": "user-guide/tables-auto-reclustering",
+    "Query Acceleration": "user-guide/query-acceleration-service",
+    "Budgets & Quotas": "user-guide/budgets/per-user-quotas",
+    "Cost Anomaly Detection": "user-guide/cost-anomalies",
+    "Secure Data Sharing": "user-guide/data-sharing-intro",
+    "Snowflake Marketplace": "collaboration/collaboration-marketplace-about",
+    "Internal Marketplace": "collaboration/collaboration-listings-about",
+    "Data Clean Rooms": "user-guide/cleanrooms/overview",
+    "Cross-Cloud Auto-Fulfillment": "collaboration/provider-listings-auto-fulfillment",
+    "Native Apps": "developer-guide/native-apps/native-apps-about",
+    "Streamlit in Snowflake": "developer-guide/streamlit/about-streamlit",
+    "Snowflake App Runtime": "developer-guide/snowflake-app-runtime/about-snowflake-app-runtime",
+    "Snowflake CLI": "developer-guide/snowflake-cli/index",
+    "DCM Projects": "user-guide/dcm-projects/dcm-projects-overview",
+    "Workspaces & Git": "user-guide/ui-snowsight/workspaces",
+    "CI/CD with OIDC": "developer-guide/cicd/index",
+    "Snowflake Trail": "https://www.snowflake.com/en/product/features/snowflake-trail/",
+    "Event Tables & Telemetry": "developer-guide/logging-tracing/event-table-setting-up",
+    "Alerts & Notifications": "user-guide/alerts",
+    "Query Insights & Profile": "user-guide/query-insights",
+    "Resource Monitors": "user-guide/resource-monitors",
+    "Task Monitoring": "user-guide/tasks-events",
+    "Snowflake Partner Network": "https://www.snowflake.com/en/why-snowflake/partners/",
+    "Services & Technology Partners": "https://www.snowflake.com/en/why-snowflake/partners/all-partners/",
+    "Connected Apps": "collaboration/guidelines-reqs-for-listing-apps",
+    "BI Integrations": "https://www.snowflake.com/en/product/use-cases/ai-powered-bi/",
+    "Startup Accelerator": "https://www.snowflake.com/en/why-snowflake/startup-program/startup-accelerator/",
+    "Partner App Trials": "collaboration/consumer-saas-trials",
+    // Expedition 2026 links: public docs or product pages, HTTP 200 on 2026-11-06; rechecked 2026-11-13.
+    "Pipeline Builder": "user-guide/pipeline-builder/pipeline-builder-overview",
+    "Optima Clustering": "user-guide/snowflake-optima",
+    "Cortex AI Gateway": "user-guide/snowflake-cortex/cortex-ai-gateway",
+    "Cortex Training": "user-guide/snowflake-cortex/cortex-training",
+    "Open Data Sharing (Apache Polaris)": "collaboration/open-format-sharing",
+    "Business Ontology": "user-guide/snowflake-horizon/horizon-context",
+    "Skills & Plugins": "user-guide/cortex-code/cortex-code-skill-plugin-sharing",
+    "Datastream": "https://www.snowflake.com/en/product/features/datastream/",
+    "Cortex Agent SDK": "user-guide/snowflake-cortex/cortex-agent-sdk/cortex-agent-sdk",
+    "Snowflake Dashboards": "user-guide/snowflake-dashboards"
+  };
+  // Public guide URLs and topic fit checked 2026-10-27; tutorial code was not executed.
+  const G = "https://www.snowflake.com/en/developers/guides/";
+  const guides = {
+    "Gen2 Warehouses": ["sfguide-build-end-to-end-ai-app-on-snowflake", "Build an End-to-End Application Using CoCo", "Gen2 Warehouse: Optima Indexing - verify warehouse generation, run queries and inspect Query Profile"],
+    "Budgets & Quotas": ["zero-to-snowflake", "Zero to Snowflake", "Create a budget, set spending limits and add resources; budget exercise only, not quotas"],
+    "Network Policies & Private Link": ["snowflake-postgres-spcs-pgadmin-connect-via-privatelink", "Connect pgAdmin to Snowflake Postgres via Private Link", "Postgres/SPCS Private Link setup and verification; account-level Private Link must already be enabled"],
+    "Authentication Policies & MFA": ["getting-started-with-ai-foundry-and-the-snowflake-managed-mcp", "AI Foundry and the Snowflake Managed MCP Server", "Create a PAT authentication policy; does not attach the policy or configure MFA"],
+    "Data Clean Rooms": ["https://docs.snowflake.com/user-guide/cleanrooms/tutorials/collaboration-basic-ui-tutorial", "Collaboration Clean Rooms Hands-on Tutorial", "Register offerings, create and join a collaboration, and run audience overlap; requires two configured accounts"],
+    "CoCo Automations": ["https://docs.snowflake.com/en/user-guide/cortex-code/cortex-code-automations", "Cortex Code Automations", "Official cloud scheduling walkthrough, not a dedicated lab; Snowsight and CLI automations are Snowflake-hosted, distinct from local Desktop automations; docs page still labeled Preview", "Walkthrough"],
+    "Interactive Warehouses": ["getting-started-with-interactive-analytics", "Interactive Analytics"],
+    "Snowpark-optimized Warehouses": ["machine-learning-with-snowpark-python", "Machine Learning with Snowpark Python", "ML training on Snowpark-optimized compute"],
+    "Snowpark Container Services": ["intro-to-snowpark-container-services", "Intro to Snowpark Container Services"],
+    "Serverless Compute": ["getting-started-with-streams-and-tasks", "Streams & Tasks", "Serverless tasks"],
+    "Snowflake Tables": ["getting-started-with-snowflake", "Getting Started with Snowflake"],
+    "Apache Iceberg Tables": ["get-started-snowflake-managed-iceberg-tables", "Iceberg Tables on Snowflake-Managed Storage"],
+    "Catalog-linked Databases": ["lakehouse-iceberg-production-pipelines", "Lakehouse Production Pipelines", "AWS Glue catalog-linked database"],
+    "Horizon Iceberg REST Catalog": ["govern-iceberg-tables-for-external-engines-with-snowflake-horizon", "Govern Iceberg for External Engines with Horizon"],
+    "Stages & Directory Tables": ["getting-started-with-unstructured-data", "Getting Started with Unstructured Data"],
+    "Openflow": ["getting-started-with-openflow-spcs", "Openflow Snowflake Deployments"],
+    "Snowpipe": ["getting-started-with-snowpipe", "Getting Started with Snowpipe"],
+    "Snowpipe Streaming": ["getting-started-with-snowpipe-streaming-v2", "Snowpipe Streaming High-Performance Architecture"],
+    "COPY INTO": ["snowflake-northstar-data-engineering", "Data Engineering with Snowflake", "Batch loading in an end-to-end pipeline"],
+    "AIM Agent for Data Warehouses": ["snowflake-aim-e2e-ssis-migration", "Snowflake AIM End-to-End SQL Server and SSIS Migration"],
+    "Data Migration & Validation": ["snowflake-aim-e2e-ssis-migration", "Snowflake AIM End-to-End SQL Server and SSIS Migration", "Data migration and verification sections only"],
+    "ETL to dbt Conversion": ["snowflake-aim-e2e-ssis-migration", "Snowflake AIM End-to-End SQL Server and SSIS Migration", "SSIS to dbt sections"],
+    "SnowConvert AI": ["how-to-accelerate-data-warehouse-migrations-with-snowconvert-ai", "Accelerate Migrations with SnowConvert AI"],
+    "SQL & Snowpark Python": ["data-engineering-pipelines-with-snowpark-python", "Data Engineering Pipelines with Snowpark Python"],
+    "Dynamic Tables": ["comprehensive-guide-to-dynamic-tables", "Comprehensive Guide to Dynamic Tables"],
+    "Tasks & Task Graphs": ["getting-started-with-task-graphs", "Getting Started with Task Graphs"],
+    "dbt Projects on Snowflake": ["dbt-projects-on-snowflake", "Exploring dbt Projects on Snowflake"],
+    "Snowpark Connect for Spark": ["getting-started-with-snowpark-connect-for-apache-spark", "Snowpark Connect for Apache Spark"],
+    "Notebooks": ["getting-started-with-snowflake-notebooks-in-workspaces-eda-ml-pipeline", "Notebooks in Workspaces: EDA and ML Pipeline"],
+    "Snowflake Postgres": ["getting-started-with-snowflake-postgres", "Getting Started with Snowflake Postgres"],
+    "pg_lake": ["build-a-lakehouse-with-snowflake-postgres-and-pg-lake", "Build a Lakehouse with Postgres and pg_lake"],
+    "Postgres Mirrors": ["snowflake-postgres-mirror-to-snowflake", "Mirror Data from Snowflake Postgres"],
+    "Hybrid Tables": ["getting-started-with-hybrid-tables", "Getting Started with Hybrid Tables"],
+    "Interactive Tables": ["interactive-tables-snowpipe-streaming-arcade-lab", "Real-Time Streaming Arcade Lab", "Interactive Tables with Snowpipe Streaming"],
+    "Streams": ["getting-started-with-streams-and-tasks", "Getting Started with Streams & Tasks"],
+    "Snowflake CLI": ["getting-started-with-snowflake-cli", "Getting Started with Snowflake CLI"],
+    "DCM Projects": ["get-started-snowflake-dcm-projects", "Get Started with DCM Projects"],
+    "Workspaces & Git": ["streamlit-apps-git-backed-workspaces", "Build Streamlit Apps with Git-Backed Workspaces", "Git collaboration for Streamlit apps"],
+    "CI/CD with OIDC": ["configure-cicd-integrations-with-snowflake", "Configure CI/CD Integrations with Snowflake"],
+    "Cortex AI Functions": ["getting-started-with-cortex-aisql", "Getting Started with Cortex AI Functions"],
+    "Document Intelligence": ["create-a-document-processing-pipeline-with-ai-extract", "Document Processing with AI_EXTRACT", "Structured extraction with AI_EXTRACT"],
+    "Cortex Search": ["ask-questions-to-your-own-documents-with-snowflake-cortex-search", "Build a RAG Assistant with Cortex Search"],
+    "Model Registry & Serving": ["deploying-custom-models-to-snowflake-model-registry", "Deploy Custom Models to Model Registry", "Registry and warehouse inference, not online endpoints"],
+    "ML Jobs & Feature Store": ["e2e-task-graph", "Orchestrate ML Pipelines with ML Jobs and Task Graphs"],
+    "ML Observability": ["getting-started-with-ml-observability-in-snowflake", "Getting Started with ML Observability"],
+    "Cortex Agents": ["getting-started-with-cortex-agents", "Getting Started with Cortex Agents"],
+    "Semantic Views & Cortex Analyst": ["snowflake-semantic-view", "Getting Started with Semantic View"],
+    "Managed MCP Servers": ["getting-started-with-snowflake-mcp-server", "Getting Started with Managed Snowflake MCP Server"],
+    "Agent Evaluation": ["getting-started-with-cortex-agent-evaluations", "Getting Started with Cortex Agent Evaluations"],
+    "Code Execution Sandbox": ["build-evaluate-and-deploy-ai-agents-with-snowflake-cowork", "Build, Evaluate and Deploy AI Agents with CoWork", "Sandbox-generated HTML reports in an agent lab"],
+    "Snowflake CoWork": ["getting-started-with-cowork", "Getting Started with Snowflake CoWork"],
+    "CoWork Deep Research": ["getting-started-with-cowork", "Getting Started with Snowflake CoWork", "Deep Research exercise within the CoWork lab"],
+    "CoWork Automations": ["getting-started-with-cowork", "Getting Started with Snowflake CoWork", "Schedule recurring emailed analysis"],
+    "Cortex Code (CoCo)": ["getting-started-with-coco-desktop", "Get Started with CoCo Desktop"],
+    "Skills & Plugins": ["build-a-coco-skill", "Build Your First CoCo Skill"],
+    "Horizon Catalog": ["getting-started-with-horizon-for-data-governance-in-snowflake", "Getting Started with Agentic Governance in Snowflake", "Governance lab, not external metadata connectors"],
+    "Classification & Tags": ["advanced-data-governance-summit-hol", "Advanced Data Governance Hands-on Lab", "Classification profiles, tag mapping and propagation"],
+    "Masking & Row Access Policies": ["advanced-data-governance-summit-hol", "Advanced Data Governance Hands-on Lab", "Tag-based masking and row access policies"],
+    "Lineage": ["advanced-data-governance-summit-hol", "Advanced Data Governance Hands-on Lab", "Access History-based sensitive-data column lineage"],
+    "Data Metric Functions": ["getting-started-with-data-quality-in-snowflake", "Getting Started with Data Quality Monitoring"],
+    "Trust Center": ["advanced-data-governance-summit-hol", "Advanced Data Governance Hands-on Lab", "Data Security dashboard and entitlement reports"],
+    "Replication & Failover": ["cross-cloud-business-continuity", "Cross Cloud Business Continuity"],
+    "Time Travel & Fail-safe": ["getting-started-with-time-travel", "Getting Started with Time Travel", "Time Travel only, not Fail-safe"],
+    "Snowflake Optima": ["sfguide-build-end-to-end-ai-app-on-snowflake", "Build an End-to-End Application Using CoCo", "Optima Indexing and query-profile exercise"],
+    "Search Optimization": ["getting-started-with-search-optimization", "Getting Started with Search Optimization"],
+    "Automatic Clustering": ["getting-started-cost-performance-optimization", "Cost and Performance Optimization", "Clustering exercise"],
+    "Query Acceleration": ["getting-started-cost-performance-optimization", "Cost and Performance Optimization", "Query Acceleration Service exercise"],
+    "Snowflake Trail": ["getting-started-with-snowflake-trail-for-observability", "Snowflake Trail for Observability"],
+    "Event Tables & Telemetry": ["alert-on-events", "Getting Started with Event Tables and Alerts"],
+    "Alerts & Notifications": ["alert-on-events", "Getting Started with Event Tables and Alerts"],
+    "Query Insights & Profile": ["sfguide-build-end-to-end-ai-app-on-snowflake", "Build an End-to-End Application Using CoCo", "Query Profile only, not the Query Insights feature"],
+    "Resource Monitors": ["tasty-bytes-zero-to-snowflake-cost-management", "Tasty Bytes: Cost Management", "Warehouse resource-monitor exercise"],
+    "Task Monitoring": ["e2e-task-graph", "Orchestrate ML Pipelines with ML Jobs and Task Graphs", "Task history, logs and graph debugging"],
+    "Secure Data Sharing": ["data-collaboration-two-way", "Two Way Data Collaboration", "Bidirectional private-listing workflow"],
+    "Snowflake Marketplace": ["tasty-bytes-zero-to-snowflake-collaboration", "Tasty Bytes: Collaboration", "Acquire and analyze Marketplace weather data"],
+    "Internal Marketplace": ["sharing-data-and-ai-on-snowflake-internal-marketplace", "Sharing Data and AI on Internal Marketplace"],
+    "Cross-Cloud Auto-Fulfillment": ["internal-marketplace-intra-org-sharing", "Intra-Company Data Sharing with Internal Marketplace", "Auto-fulfillment configuration within the sharing lab"],
+    "Native Apps": ["getting-started-with-native-apps", "Getting Started with Snowflake Native Apps"],
+    "Streamlit in Snowflake": ["getting-started-with-streamlit-in-snowflake", "Quickstart Guide: Cybersyn Streamlit in Snowflake - Financial Demo"],
+    "Snowflake App Runtime": ["getting-started-snowflake-app-runtime", "Get Started with Snowflake App Runtime"],
+    "BI Integrations": ["end-to-end-analytics-with-snowflake-and-power-bi", "End-to-End Analytics with Snowflake and Power BI", "Power BI integration"],
+    "Partner App Trials": ["getting-started-with-sigma", "Getting Started with Sigma", "Sigma Partner Connect trial workflow; terms may have changed"],
+    // Expedition 2026 hands-on guides: public developer guides, HTTP 200 on 2026-11-06; rechecked 2026-11-13; tutorial code not run.
+    "Pipeline Builder": ["getting-started-with-pipeline-builder", "Getting Started with Pipeline Builder"],
+    "Cortex Training": ["own-your-intelligence-cortex-training", "Own Your Intelligence with Cortex Training", "Cortex Training public preview; AWS commercial regions, requires enablement"],
+    "Snowflake Dashboards": ["getting-started-with-snowflake-dashboards", "Getting Started with Snowflake Dashboards"],
+    "Cortex Agent SDK": ["getting-started-with-cortex-agent-sdk", "Getting Started with Cortex Agent SDK"],
+    "Agents for Shared Data": ["creating-cortex-agents-for-marketplace-data-providers", "Creating Cortex Agents for Marketplace Data Providers", "Provider-built agents on listings; not the automatic Agents for Shared Data generation"],
+    "Open Data Sharing (Apache Polaris)": ["getting-started-with-global-interoperable-data-products", "Global Interoperable Data Products", "Pre-existing interoperable Iceberg data products lab, not specific to the Open Data Sharing GA release"]
+  };
+  // CoCo surfaces: chips are subentries, not extra capabilities. [label, docs path, guide slug, guide title, scope, status]
+  // Snowsight, Desktop and CLI verified GA 2026-10-28; Expedition 2026 chips verified against public sources 2026-11-06.
+  const surfaces = {
+    "Cortex Code (CoCo)": [
+      ["Snowsight", "user-guide/cortex-code/cortex-code-snowsight", "build-your-first-ml-model-in-snowflake-with-agentic-ml", "Build Your First ML Model in Snowflake with Agentic ML", "CoCo in a Snowsight Workspace Notebook"],
+      ["Desktop", "user-guide/cortex-code/cortex-code-desktop", "getting-started-with-coco-desktop", "Get Started with CoCo Desktop"],
+      ["CLI", "user-guide/cortex-code/cortex-code-cli", "getting-started-with-coco-cli", "Get Started with Snowflake CoCo CLI"],
+      ["Excel", "user-guide/cortex-code/cortex-code-excel-integration", null, null, null, "CoCo for Excel, public preview"],
+      ["Sheets", "user-guide/cortex-code/cortex-code-sheets-integration", null, null, null, "CoCo for Google Sheets, public preview"],
+      ["Slack", null, null, null, null, "Snowflake for Slack, public preview"],
+      ["Mobile", null, null, null, null, "Snowflake Mobile, public preview"]]
+  };
+  // Expedition 2026 status notes shown in tile tooltips; verified against public announcements and docs on 2026-11-06.
+  const statusNotes = {
+    "Cortex Code (CoCo)": "Expedition 2026: CoCo mode in Snowsight runs on Cloud Agents (GA); CoCo GitHub Integration and Memory public preview; automatic model tiers private preview",
+    "CoCo Automations": "Expedition 2026: GA in Snowsight and CLI, public preview in CoCo Desktop (docs page still labeled Preview); schedule, event or webhook triggers; Snowflake-hosted automations are distinct from local Desktop automations",
+    "Skills & Plugins": "Expedition 2026: Skills and Plugin Sharing GA: share by link to roles or publish in the Snowsight catalog",
+    "Business Ontology": "Expedition 2026: public preview soon, part of Horizon Context in Horizon Catalog",
+    "Cortex Sense": "Expedition 2026: public preview soon",
+    "Snowflake CoWork": "Expedition 2026: CoWork Profiles public preview, User Memory GA, Snowflake Mobile public preview, CoCo and CoWork Bots private preview soon",
+    "Cortex Agents": "Expedition 2026: Agent Abuse Detection and Agent Trace Intelligence private preview; Cortex AI Guardrails public preview soon; Coding Agents via Cortex Agents API GA",
+    "Interactive Tables": "Expedition 2026: Interactive Analytics and Zero-Copy Interactive GA; real-time analytics with Snowpipe Streaming and Streaming Transformations (private preview)",
+    "Snowpipe Streaming": "Expedition 2026: Elastic Channels GA; up to 20 GB/s per table supported; pairs with Streaming Transformations (private preview) and Interactive Analytics",
+    "Snowpipe": "Expedition 2026: automated Snowpipe setup by CoCo GA",
+    "Hybrid Tables": "Hybrid tables are GA; the new performance engine is GA and on by default (Snowflake blog, 2026-11-10), up to 8x throughput for certain workloads (Snowflake benchmarks); hybrid tables on GCP in preview",
+    "Snowflake App Runtime": "Expedition 2026: serverless compute and Workspaces integration, public preview soon",
+    "Native Apps": "Expedition 2026: App Runtime as a frontend for Native Apps and Native App access to Snowflake Postgres, both public preview soon",
+    "Streamlit in Snowflake": "Expedition 2026: user-based sharing, embedding and side-by-side CoCo conversations in Snowsight GA; automatic MCP exposure public preview; Streamlit apps as CoWork Artifacts private preview",
+    "Trust Center": "Expedition 2026: Snowflake Organizations: single GlobalOrgAdmin interface with Trust Center push, public preview; cross-account Org Usage Views and org-level budgets GA",
+    "Apache Iceberg Tables": "Expedition 2026: Write-Audit-Publish branching via Spark (Snowpark Connect) public preview; Time Travel and tags GA via Snowpark Connect (Time Travel for Iceberg tables listed as Preview in release notes); incremental reads GA; Backups and Tri-Secret Secure for Snowflake storage for Iceberg GA; Zero-Copy Parquet and Parquet Direct announced",
+    "Horizon Iceberg REST Catalog": "Expedition 2026: access to externally managed Apache Iceberg tables through Horizon Catalog GA (October 29, 2026); Horizon IRC telemetry GA",
+    "Snowpark Connect for Spark": "Expedition 2026: DataFrame Writer V2 APIs and flexible partitioning, Spark Monitoring UI and Code Bundles for Apache Spark public preview; File reader for Apache Spark coming to public preview; Iceberg v3 with Spark 4.0 private preview",
+    "Spark Migration": "Expedition 2026: Spark migration skill on CoCo GA",
+    "Postgres Mirrors": "Expedition 2026: Snowflake Postgres data mirroring GA; reverse Snowflake data mirroring public preview soon",
+    "DCM Projects": "Expedition 2026: DCM Projects GA; DCM Test Branches private preview",
+    "Dynamic Tables": "Expedition 2026: custom incrementalization, Dynamic Tables in dbt and Dynamic Tables Insights GA",
+    "dbt Projects on Snowflake": "Expedition 2026: dbt Projects with Slim CI and defer GA",
+    "Adaptive Compute": "Expedition 2026: Adaptive Compute GA; Spark on Adaptive Compute announced",
+    "Zero-Copy Connectors": "Expedition 2026: SAP Business Data Cloud, Workday Data Cloud and Salesforce zero-copy integrations GA",
+    "Cost Anomaly Detection": "Expedition 2026: tag-based cost anomaly detection GA",
+    "Pipeline Builder": "Expedition 2026: public preview; visual canvas in Workspaces that builds tasks, task graphs and Code Bundles; Task Graph Object public preview",
+    "Optima Clustering": "Expedition 2026: Automatic Key Selection GA; default for newly clustered tables since September 1, 2026; existing clustered tables stay on Clustering Classic",
+    "Cortex AI Gateway": "Expedition 2026: observability and cost governance GA; Tools (admin-managed MCP) public preview; dynamic model routing private preview",
+    "Cortex Sandboxes": "Expedition 2026: private preview; separate from the Code Execution Sandbox tool",
+    "Cortex Training": "Expedition 2026: public preview (AWS commercial regions, requires enablement)",
+    "Open Data Sharing (Apache Polaris)": "Expedition 2026: GA; read-only Snowflake-managed Iceberg tables to any Iceberg REST catalog client, no Snowflake account required",
+    "Datastream": "Expedition 2026: private preview, public preview soon; Kafka-compatible managed endpoint",
+    "Streaming Transformations": "Expedition 2026: private preview; SQL in the pipe definition, into standard, interactive and Snowflake-managed Iceberg tables",
+    "Cortex Agent SDK": "Expedition 2026: public preview; one SDK for running CoCo sessions and Cortex Agents (Python and npm)",
+    "Async Agent API": "Expedition 2026: GA for Snowflake CoWork",
+    "Snowflake Dashboards": "Expedition 2026: public preview; build in Snowsight by describing to CoCo, open and talk to them in CoWork; HTML Reports public preview",
+    "Analytical Search": "Expedition 2026: public preview in Snowflake CoWork",
+    "Agents for Shared Data": "Expedition 2026: public preview; generates a Cortex Agent and semantic view for shared data; Agentic Marketplace Discovery and AI Data Package public preview"
+  };
+  let linkMode = "docs";
+  let activeView = "all";
+
+  // Persona views reuse tiles from `layers`; each tile keeps its home layer colour.
+  const views = {
+    all: { tab: "Full platform", badge: "2026<br>Overview",
+      sub: "From data engineering to agentic AI - one platform, one governance model" },
+    de: { tab: "Data Engineering", badge: "2026<br>Data Eng",
+      sub: "Ingest, store, transform and operate pipelines - one platform, one governance model",
+      stages: [
+        ["Migrate", "Convert, move and validate legacy workloads", "snowconvert",
+          ["AIM Agent for Data Warehouses", "SnowConvert AI", "Data Migration & Validation", "ETL to dbt Conversion", "Spark Migration", "Teradata Virtualization"]],
+        ["Ingest", "Batch, streaming and CDC", "openflow",
+          ["Openflow", "Snowpipe", "Snowpipe Streaming", "COPY INTO", "Zero-Copy Connectors", "Postgres Mirrors", "Datastream", "Streaming Transformations"]],
+        ["Store", "Managed or open table formats", "iceberg-tables",
+          ["Snowflake Tables", "Apache Iceberg Tables", "Catalog-linked Databases", "Horizon Iceberg REST Catalog", "Stages & Directory Tables", "Storage Lifecycle Policies"]],
+        ["Transform", "SQL, Python, Spark and dbt", "dynamic-tables",
+          ["SQL & Snowpark Python", "Dynamic Tables", "Tasks & Task Graphs", "dbt Projects on Snowflake", "Snowpark Connect for Spark", "Streams", "Pipeline Builder"]],
+        ["Operate", "Observe, test and trust the data", "snowflake-trail",
+          ["Snowflake Trail", "Alerts & Notifications", "Task Monitoring", "Data Metric Functions", "Lineage", "Gen2 Warehouses", "Optima Clustering"]]] },
+    ai: { tab: "AI & Agents", badge: "2026<br>AI & Agents",
+      sub: "Ground, build, deliver and govern agents - on the data you already trust",
+      stages: [
+        ["Ground", "Context agents can rely on", "horizon-context",
+          ["Semantic Views & Cortex Analyst", "Cortex Search", "Document Intelligence", "Cortex AI Functions", "Horizon Catalog", "Cortex Sense", "Analytical Search", "Agents for Shared Data"]],
+        ["Build", "Agents, tools and coding agents", "cortex",
+          ["Cortex Agents", "Managed MCP Servers", "Code Execution Sandbox", "Agent Evaluation", "Skills & Plugins", "Cortex Code (CoCo)", "Cortex Sandboxes", "Cortex Agent SDK", "Async Agent API"]],
+        ["Deliver", "Put agents in front of people", "snowflake-cowork",
+          ["Snowflake CoWork", "CoWork Deep Research", "CoWork Automations", "CoCo Automations", "Streamlit in Snowflake", "Snowflake App Runtime", "Snowflake Dashboards"]],
+        ["Govern", "Same policies for data and AI", "security-governance",
+          ["Masking & Row Access Policies", "Classification & Tags", "Trust Center", "Authentication Policies & MFA", "Budgets & Quotas", "Snowflake Trail", "Cortex AI Gateway"]]] },
+    ds: { tab: "Data Science & ML", badge: "2026<br>DS & ML",
+      sub: "Explore, train, serve and manage models - next to the data",
+      stages: [
+        ["Explore", "Notebooks and familiar APIs", "notebook",
+          ["Notebooks", "SQL & Snowpark Python", "Snowpark Connect for Spark", "Workspaces & Git", "Apache Iceberg Tables", "Snowflake Marketplace"]],
+        ["Train", "Features and scalable compute", "snowflake-ml",
+          ["ML Jobs & Feature Store", "Snowpark-optimized Warehouses", "Snowpark Container Services", "Dynamic Tables", "Cortex AI Functions", "Data Metric Functions", "Cortex Training"]],
+        ["Serve", "Models, apps and agents", "snowpark-modeling-registry",
+          ["Model Registry & Serving", "ML Observability", "Interactive Tables", "Streamlit in Snowflake", "Native Apps", "Cortex Agents", "Snowflake Dashboards"]],
+        ["Manage", "Reproducible and governed MLOps", "horizon",
+          ["Lineage", "Classification & Tags", "Masking & Row Access Policies", "Tasks & Task Graphs", "CI/CD with OIDC", "Budgets & Quotas"]]] }
+  };
+  const NS = "http://www.w3.org/2000/svg";
+  const main = document.getElementById("layers");
+  const tileColor = {};
+  for (const [, , color, , items] of layers) for (const it of items) tileColor[it] = color;
+
+  function svgIcon(cls, icon) {
+    const ic = document.createElementNS(NS, "svg");
+    ic.setAttribute("class", cls); ic.setAttribute("aria-hidden", "true");
+    const u = document.createElementNS(NS, "use"); u.setAttribute("href", "#i-" + icon);
+    ic.append(u);
+    return ic;
+  }
+  function makeTile(it, ownColor) {
+    const guide = guides[it];
+    const path = linkMode === "guides" ? (guide ? (guide[0].startsWith("https://") ? guide[0] : G + guide[0] + "/") : null) : docs[it];
+    const t = document.createElement(path ? "a" : "div");
+    t.className = "tile";
+    if (linkMode === "guides" && !guide) t.classList.add("unmapped");
+    if (ownColor) t.style.setProperty("--c", tileColor[it]);
+    const tl = document.createElement("span"); tl.textContent = it.replace("Transformations", "Transfor\u00ADmations"); // soft hyphen for the narrow tile
+    if (linkMode === "guides") {
+      const marker = document.createElement("small");
+      marker.className = "guide-marker";
+      marker.textContent = guide ? (guide[3] || (guide[2] ? "Scoped lab" : "Hands-on guide")) : "No guide mapped";
+      tl.append(marker);
+      if (!guide) t.title = it + " - No verified hands-on guide mapped in this edition";
+    }
+    if (!path && statusNotes[it]) t.title = (t.title || it) + " - " + statusNotes[it];
+    t.append(svgIcon("ti", tileIcons[it]), tl);
+    if (path) {
+      t.href = path.startsWith("https://") ? path : D + path;
+      t.target = "_blank"; t.rel = "noopener noreferrer";
+      t.title = linkMode === "guides" ? guide[1] + (guide[2] ? " - " + guide[2] : "") : it + (path.startsWith("https://") ? " - Snowflake resource" : " - Snowflake docs");
+      if (statusNotes[it]) t.title += " - " + statusNotes[it];
+      if (linkMode === "guides") t.setAttribute("aria-label", it + " - " + t.title);
+    }
+    if (!path || !surfaces[it]) return t;
+    // Umbrella tile: wrapper div holds the main link plus sibling chip links (no nested anchors).
+    const group = document.createElement("div");
+    group.className = "tile tile-group";
+    if (ownColor) group.style.setProperty("--c", tileColor[it]);
+    t.className = "tile-main";
+    t.style.removeProperty("--c");
+    const chips = document.createElement("div");
+    chips.className = "surfaces";
+    chips.setAttribute("role", "group");
+    chips.setAttribute("aria-label", it + " surfaces");
+    for (const [label, docPath, slug, gTitle, gScope, status] of surfaces[it]) {
+      if (!docPath || (linkMode === "guides" && !slug)) {
+        // No public docs page (or no guide in Hands-on): non-link chip.
+        const c = document.createElement("span");
+        c.textContent = label;
+        c.title = (status || "CoCo " + label) + (docPath ? " - no guide mapped" : " - no public docs page yet");
+        c.setAttribute("aria-label", c.title);
+        chips.append(c);
+        continue;
+      }
+      const c = document.createElement("a");
+      c.textContent = label;
+      c.target = "_blank"; c.rel = "noopener noreferrer";
+      if (linkMode === "guides") {
+        c.href = G + slug + "/";
+        c.title = gTitle + (gScope ? " - " + gScope : "");
+        c.setAttribute("aria-label", "CoCo " + label + " hands-on guide - " + c.title);
+      } else {
+        c.href = D + docPath;
+        c.title = (status || "CoCo " + label) + " - Snowflake docs";
+        c.setAttribute("aria-label", "Cortex Code " + label + " documentation");
+      }
+      chips.append(c);
+    }
+    group.append(t, chips);
+    return group;
+  }
+  function makeRow(name, desc, color, icon, items, stageNo) {
+    const row = document.createElement("div");
+    row.className = "layer";
+    row.style.setProperty("--c", color);
+    const head = document.createElement("div");
+    head.className = "head";
+    const b = document.createElement("b");
+    if (stageNo) { const n = document.createElement("span"); n.className = "stage-no"; n.textContent = stageNo; b.append(n); }
+    b.append(name);
+    const s = document.createElement("small"); s.textContent = desc;
+    const txt = document.createElement("div"); txt.append(b, s);
+    head.append(svgIcon("icon", icon), txt);
+    const tiles = document.createElement("div");
+    tiles.className = items.length > 6 ? "tiles dense" : "tiles";
+    // Size each group to its tile count so rows never end ragged: up to 8 on one row, larger groups split evenly.
+    const n = items.length;
+    tiles.style.setProperty("--cols", String(n <= 6 ? 6 : n <= 8 ? n : Math.ceil(n / 2)));
+    for (const it of items) tiles.append(makeTile(it, Boolean(stageNo)));
+    row.append(head, tiles);
+    return row;
+  }
+  // Stage headers use the colour of the first tile's home layer.
+  function render(key) {
+    activeView = Object.hasOwn(views, key) ? key : "all";
+    const v = views[activeView];
+    main.replaceChildren();
+    if (!v.stages) {
+      for (const [name, desc, color, icon, items] of layers) main.append(makeRow(name, desc, color, icon, items));
+    } else {
+      v.stages.forEach(([name, desc, icon, items], i) => {
+        if (i) { const f = document.createElement("div"); f.className = "flow"; f.setAttribute("aria-hidden", "true"); f.textContent = "\u2193"; main.append(f); }
+        main.append(makeRow(name, desc, tileColor[items[0]], icon, items, String(i + 1)));
+      });
+    }
+    document.getElementById("source-label").textContent = linkMode === "guides"
+      ? "Official Snowflake labs and walkthroughs; links checked 27 October to 6 November 2026"
+      : "Official Snowflake documentation and program pages, checked 27 October to 6 November 2026";
+    document.getElementById("sub").textContent = v.sub;
+    document.getElementById("badge").innerHTML = v.badge;
+    document.getElementById("renames").hidden = Boolean(v.stages);
+    document.getElementById("scope").textContent = v.stages ? v.stages.length + " stages \u2022 " + v.stages.flatMap(stage => stage[3]).length + " capabilities from the full map of " + layers.flatMap(layer => layer[4]).length : layers.length + " groups \u2022 " + layers.flatMap(layer => layer[4]).length + " capabilities & ecosystem entries";
+    const items = v.stages ? v.stages.flatMap(stage => stage[3]) : layers.flatMap(layer => layer[4]);
+    const coverage = items.filter(item => Object.hasOwn(guides, item)).length;
+    document.getElementById("link-status").textContent = linkMode === "guides"
+      ? "Hands-on: " + coverage + " of " + items.length + " tiles have a mapped guide. Scoped labs cover the topic named in the tooltip; Walkthrough labels identify documentation-based exercises. Dashed tiles have no guide mapped, not necessarily no guide available. Links and topic fit checked 27 October to 6 November 2026; tutorial code not tested."
+      : "Docs: tiles open official documentation or program pages. Switch to Hands-on for mapped developer guides.";
+    document.title = "Snowflake AI Data Cloud - 2026 " + (v.stages ? v.tab : "Overview") + (linkMode === "guides" ? " - Hands-on" : "");
+    for (const btn of nav.children) btn.setAttribute("aria-pressed", String(btn.dataset.view === activeView));
+    for (const btn of modeNav.children) btn.setAttribute("aria-pressed", String(btn.dataset.mode === linkMode));
+  }
+  function updateUrl() {
+    try {
+      const url = new URL(location.href);
+      if (activeView === "all") url.searchParams.delete("view"); else url.searchParams.set("view", activeView);
+      if (linkMode === "docs") url.searchParams.delete("links"); else url.searchParams.set("links", "guides");
+      history.replaceState(null, "", url.href);
+    } catch (e) { /* URL updates are optional in sandboxed reports. */ }
+  }
+  const nav = document.getElementById("views");
+  const modeNav = document.getElementById("link-modes");
+  for (const [mode, label] of [["docs", "Docs"], ["guides", "Hands-on"]]) {
+    const btn = document.createElement("button");
+    btn.type = "button"; btn.dataset.mode = mode; btn.textContent = label;
+    btn.addEventListener("click", () => { linkMode = mode; render(activeView); updateUrl(); });
+    modeNav.append(btn);
+  }
+  for (const [key, v] of Object.entries(views)) {
+    const btn = document.createElement("button");
+    btn.type = "button"; btn.dataset.view = key; btn.textContent = v.tab;
+    btn.addEventListener("click", () => {
+      render(key);
+      updateUrl();
+    });
+    nav.append(btn);
+  }
+  let start = "all";
+  try {
+    const params = new URLSearchParams(location.search);
+    start = params.get("view") || "all";
+    linkMode = params.get("links") === "guides" ? "guides" : "docs";
+  } catch (e) { /* sandboxed */ }
+  render(start);
+</script>
+</body>
+</html>
