@@ -1,14 +1,15 @@
-# Snowflake ecosystem 2026: one map to start
+# Snowflake ecosystem 2026: one map, a new deep dive every Tuesday
 
 > **Disclaimer.** Personal project, opinions are my own, not an official Snowflake resource. Verified against public docs on 2026-10-28.
 
-One self-contained, offline HTML view of the Snowflake AI Data Cloud, plus PNG exports. More views are published week by week. Every view is a single HTML file with embedded data, styles and scripts: no build step is needed to use it, and it makes no network requests at runtime. Open [`index.html`](index.html) to start.
+Self-contained, offline HTML pages of the Snowflake AI Data Cloud, plus PNG exports. Every page is a single HTML file with embedded data, styles and scripts: no build step is needed to use it, and it makes no network requests at runtime. Open [`index.html`](index.html) to start: it links the ecosystem map and one topic guide per published topic, with Decide, Build, Learn and Connect tabs on one page.
 
 ## Views
 
 | View | What it does |
 |---|---|
 | [Ecosystem map](ecosystem-map/snowflake-ecosystem-2026.html) | One picture of the platform: 16 groups, 108 capabilities, with Data Engineering, AI & Agents and Data Science & ML persona views (`?view=de\|ai\|ds`). |
+| [Open Lakehouse / Iceberg](topics/snowflake-topic-2026-iceberg.html) | Topic guide: decide, build, learn and connect on one page. |
 
 ## How it was verified, and its limits
 
