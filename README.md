@@ -9,7 +9,7 @@ Self-contained, offline HTML pages of the Snowflake AI Data Cloud, plus PNG expo
 | View | What it does |
 |---|---|
 | [Ecosystem map](ecosystem-map/snowflake-ecosystem-2026.html) | One picture of the platform: 16 groups, 108 capabilities, with Data Engineering, AI & Agents and Data Science & ML persona views (`?view=de\|ai\|ds`). |
-| [Open Lakehouse / Iceberg](topics/snowflake-topic-2026-iceberg.html) | Topic guide: decide, build, learn and connect on one page. |
+| [Snowflake Lakehouse: Open by Choice](topics/snowflake-topic-2026-iceberg.html) | Topic guide: decide, build, learn and connect on one page. |
 
 ## How it was verified, and its limits
 
